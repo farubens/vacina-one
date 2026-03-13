@@ -315,7 +315,7 @@ p {
 
 .coupon-box {
   position: relative;
-  overflow: visible;
+  overflow: hidden;
   display: inline-flex;
   align-items: center;
   gap: 10px;
