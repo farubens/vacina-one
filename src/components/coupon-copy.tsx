@@ -1,6 +1,7 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
+import { RiCoupon3Fill } from "react-icons/ri";
 
 type CouponCopyProps = {
   code: string;
@@ -30,7 +31,7 @@ export function CouponCopy({ code }: CouponCopyProps) {
         {copied ? "Copiado!" : "Clique para copiar"}
       </span>
       <span className="coupon-icon" aria-hidden="true">
-        🎟️
+        <RiCoupon3Fill />
       </span>
       <span>Use o cupom: {code}</span>
     </button>

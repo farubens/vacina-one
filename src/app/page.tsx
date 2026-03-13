@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa6";
 import { CouponCopy } from "../components/coupon-copy";
 import { Reveal } from "../components/reveal";
@@ -41,29 +41,29 @@ export default function Home() {
           <Reveal className="hero-media">
             <div className="hero-media-stack">
               <div className="hero-photo hero-photo-top">
-                <img src={heroImages.child} alt="CrianÃ§a sorrindo" />
+                <img src={heroImages.child} alt="Criança sorrindo" />
               </div>
               <div className="hero-photo hero-photo-bottom">
-                <img src={heroImages.baby} alt="BebÃª sorrindo" />
+                <img src={heroImages.baby} alt="Bebê sorrindo" />
               </div>
             </div>
 
             <div className="hero-photo hero-photo-main">
-              <img src={heroImages.vaccine} alt="AplicaÃ§Ã£o de vacina" />
+              <img src={heroImages.vaccine} alt="Aplicação de vacina" />
             </div>
 
-            <div className="hero-badge">ProteÃ§Ã£o em primeiro lugar</div>
+            <div className="hero-badge">Proteção em primeiro lugar</div>
           </Reveal>
 
           <Reveal className="hero-copy" delay={0.08}>
             <h1>
-              Nova ClÃ­nica de VacinaÃ§Ã£o em <span className="title-accent">Campinas</span>
+              Nova Clínica de Vacinação em <span className="title-accent">Campinas</span>
               <em>Em breve</em>
             </h1>
 
             <p className="hero-description">
-              A <span className="hero-highlight">VacinaOne</span> estÃ¡ chegando ao {" "}
-              <span className="hero-highlight">Taquaral, prÃ³ximo ao MansÃµes Santo AntÃ´nio,</span> em Campinas.
+              A <span className="hero-highlight">VacinaOne</span> está chegando ao{" "}
+              <span className="hero-highlight">Taquaral, próximo ao Mansões Santo Antônio,</span> em Campinas.
             </p>
           </Reveal>
         </div>
@@ -73,12 +73,12 @@ export default function Home() {
         <div className="container highlight-grid">
           <Reveal className="highlight-copy">
             <h2>
-              Uma clÃ­nica de vacinaÃ§Ã£o <span>moderna, segura, futurista e humanizada,</span> criada para cuidar de {" "}
-              <strong>crianÃ§as, adultos e idosos.</strong>
+              Uma clínica de vacinação <span>moderna, segura, futurista e humanizada,</span> criada para cuidar de{" "}
+              <strong>crianças, adultos e idosos.</strong>
             </h2>
 
             <p>
-              Cadastre-se agora para acompanhar a inauguraÃ§Ã£o e garantir seu benefÃ­cio exclusivo de lanÃ§amento.
+              Cadastre-se agora para acompanhar a inauguração e garantir seu benefício exclusivo de lançamento.
             </p>
 
             <CouponCopy code="VACINAONE10" />
@@ -100,15 +100,15 @@ export default function Home() {
               <input type="text" name="coupon" placeholder="Cupom" defaultValue="VACINAONE10" aria-label="Cupom" />
               <input type="text" name="vaccine" placeholder="Qual vacina?" aria-label="Qual vacina" />
               <button className="interactive-btn" type="submit">
-                QUERO MEU BENEFÃCIO DE INAUGURAÃ‡ÃƒO
+                QUERO MEU BENEFÍCIO DE INAUGURAÇÃO
               </button>
             </form>
           </Reveal>
 
           <Reveal className="form-copy" delay={0.1}>
             <p className="form-copy-text">
-              <span className="form-highlight">Preencha o formulÃ¡rio</span> e seja um dos primeiros a conhecer a
-              VacinaOne. <strong>O cuidado que sua famÃ­lia merece comeÃ§a aqui.</strong>
+              <span className="form-highlight">Preencha o formulário</span> e seja um dos primeiros a conhecer a
+              VacinaOne. <strong>O cuidado que sua família merece começa aqui.</strong>
             </p>
           </Reveal>
         </div>
@@ -150,7 +150,7 @@ export default function Home() {
                   height={18}
                   className="footer-contact-icon"
                 />
-                <span>R. Percilio Neto, 407 - Parque Taquaral - Campinas - SP</span>
+                <span>R. Percílio Neto, 407 - Parque Taquaral - Campinas - SP</span>
               </li>
             </ul>
 
@@ -168,13 +168,13 @@ export default function Home() {
           </Reveal>
 
           <Reveal className="footer-right" delay={0.1}>
-            <h2>Ficou com alguma dÃºvida? Fale com a gente.</h2>
+            <h2>Ficou com alguma dúvida? Fale com a gente.</h2>
             <p>
-              Quer agendar, tirar uma dÃºvida ou entender como a VacinaOne pode ajudar sua famÃ­lia, equipe ou
-              instituiÃ§Ã£o? Envie uma mensagem e retornamos em breve.
+              Quer agendar, tirar uma dúvida ou entender como a VacinaOne pode ajudar sua família, equipe ou
+              instituição? Envie uma mensagem e retornamos em breve.
             </p>
             <a href="#cadastro" className="footer-cta interactive-btn">
-              Agendar VacinaÃ§Ã£o
+              Agendar Vacinação
             </a>
           </Reveal>
         </div>
