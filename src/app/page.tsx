@@ -30,7 +30,7 @@ export default function Home() {
 
           <Reveal delay={0.08}>
             <a className="franchise-cta interactive-btn" href="#rodape">
-              Fale com um atendente
+              QUERO SER UM DOS PRIMEIROS
             </a>
           </Reveal>
         </div>
@@ -174,7 +174,7 @@ export default function Home() {
               instituição? Envie uma mensagem e retornamos em breve.
             </p>
             <a href="#cadastro" className="footer-cta interactive-btn">
-              Agendar Vacinação
+              QUERO SER UM DOS PRIMEIROS
             </a>
           </Reveal>
         </div>
