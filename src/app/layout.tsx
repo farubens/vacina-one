@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import { Manrope } from "next/font/google";
+import { Lexend, Manrope } from "next/font/google";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -9,41 +8,11 @@ const manrope = Manrope({
   variable: "--font-manrope",
 });
 
-const franie = localFont({
-  src: [
-    {
-      path: "../assets/fonts/franie/FranieVariableTest-Regular-BF64c31f3d73b64.otf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/franie/FranieVariableTest-SemiBold-BF64c31f3d7b0b9.otf",
-      weight: "600",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/franie/FranieVariableTest-Bold-BF64c31f3d8798d.otf",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/franie/FranieVariableTest-ExtraBold-BF64c31f3d93e1b.otf",
-      weight: "800",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/franie/FranieVariableTest-Black-BF64c31f3ca614b.otf",
-      weight: "900",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/franie/FranieVariableTest-BlackItalic-BF64c31f3d4f65c.otf",
-      weight: "900",
-      style: "italic",
-    },
-  ],
+const lexend = Lexend({
+  subsets: ["latin"],
   display: "swap",
-  variable: "--font-franie",
+  variable: "--font-lexend",
+  weight: ["700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -59,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${manrope.variable} ${franie.variable}`}>{children}</body>
+      <body className={`${manrope.variable} ${lexend.variable}`}>{children}</body>
     </html>
   );
 }
