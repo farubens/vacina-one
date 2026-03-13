@@ -23,6 +23,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -30,6 +31,7 @@ body {
   font-family: var(--font-manrope), sans-serif;
   background: #ffffff;
   color: var(--text);
+  overflow-x: hidden;
 }
 
 h1,
@@ -323,6 +325,13 @@ p {
   font-size: 15px;
 }
 
+.coupon-icon {
+  display: inline-flex;
+  font-size: 18px;
+  line-height: 1;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.12));
+}
+
 .robot-wrap {
   position: absolute;
   right: -140px;
@@ -333,7 +342,7 @@ p {
 }
 
 .robot-image {
-  width: 765px;
+  width: 681px;
   max-width: none;
   margin: -90px 0 -200px auto;
   object-fit: contain;
@@ -515,14 +524,14 @@ p {
 .footer-cta {
   display: inline-flex;
   margin-top: 36px;
-  min-height: 72px;
-  padding: 0 44px;
+  min-height: 36px;
+  padding: 0 22px;
   border-radius: 999px;
   align-items: center;
   justify-content: center;
   background: #f2b23a;
   color: #ffffff;
-  font-size: 36px;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: -0.02em;
 }
@@ -628,8 +637,8 @@ p {
   }
 
   .footer-cta {
-    font-size: 28px;
-    min-height: 62px;
+    font-size: 18px;
+    min-height: 42px;
   }
 }
 
@@ -749,8 +758,8 @@ p {
 
   .footer-cta {
     margin-top: 22px;
-    font-size: 22px;
-    min-height: 54px;
-    padding: 0 28px;
+    font-size: 16px;
+    min-height: 38px;
+    padding: 0 18px;
   }
 }

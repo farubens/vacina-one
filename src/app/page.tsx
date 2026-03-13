@@ -28,8 +28,8 @@ export default function Home() {
           </Reveal>
 
           <Reveal delay={0.08}>
-            <a className="franchise-cta interactive-btn" href="#cadastro">
-              Seja um Franqueado
+            <a className="franchise-cta interactive-btn" href="#rodape">
+              Fale com um atendente
             </a>
           </Reveal>
         </div>
@@ -77,11 +77,15 @@ export default function Home() {
             </h2>
 
             <p>
-              Cadastre-se agora para acompanhar a inauguração e garantir seu
-              benefício exclusivo de lançamento.
+              Cadastre-se agora para acompanhar a inauguração e garantir seu benefício exclusivo de lançamento.
             </p>
 
-            <div className="coupon-box">Use o cupom: VACINAONE10</div>
+            <div className="coupon-box">
+              <span className="coupon-icon" aria-hidden="true">
+                🎟️
+              </span>
+              <span>Use o cupom: VACINAONE10</span>
+            </div>
           </Reveal>
 
           <Reveal className="robot-wrap" delay={0.1}>
@@ -92,21 +96,17 @@ export default function Home() {
 
       <section id="cadastro" className="form-section">
         <div className="container form-grid">
-          <Reveal className="lead-form">
-            <input type="text" name="name" placeholder="Nome Completo" aria-label="Nome completo" />
-            <input type="tel" name="phone" placeholder="WhatsApp" aria-label="WhatsApp" />
-            <input type="email" name="email" placeholder="Email" aria-label="Email" />
-            <input
-              type="text"
-              name="coupon"
-              placeholder="Cupom"
-              defaultValue="VACINAONE10"
-              aria-label="Cupom"
-            />
-            <input type="text" name="vaccine" placeholder="Qual vacina?" aria-label="Qual vacina" />
-            <button className="interactive-btn" type="submit">
-              QUERO MEU BENEFÍCIO DE INAUGURAÇÃO
-            </button>
+          <Reveal>
+            <form className="lead-form" action="/obrigado" method="get">
+              <input type="text" name="name" placeholder="Nome Completo" aria-label="Nome completo" required />
+              <input type="tel" name="phone" placeholder="WhatsApp" aria-label="WhatsApp" required />
+              <input type="email" name="email" placeholder="Email" aria-label="Email" required />
+              <input type="text" name="coupon" placeholder="Cupom" defaultValue="VACINAONE10" aria-label="Cupom" />
+              <input type="text" name="vaccine" placeholder="Qual vacina?" aria-label="Qual vacina" />
+              <button className="interactive-btn" type="submit">
+                QUERO MEU BENEFÍCIO DE INAUGURAÇÃO
+              </button>
+            </form>
           </Reveal>
 
           <Reveal className="form-copy" delay={0.1}>
@@ -118,7 +118,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="footer-section">
+      <footer id="rodape" className="footer-section">
         <div className="container footer-grid">
           <Reveal className="footer-left">
             <Image
