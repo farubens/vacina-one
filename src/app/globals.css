@@ -929,7 +929,7 @@ p {
   }
 
   .highlight-copy {
-    padding: 52px 0 0;
+    padding: 24px 0 0;
     text-align: center;
   }
 
@@ -948,21 +948,48 @@ p {
     margin-right: auto;
   }
 
+  .highlight-grid {
+    min-height: auto;
+    gap: 12px;
+    align-items: start;
+  }
+
   .form-copy-text {
     font-size: 20px;
   }
 
   .form-section {
-    padding-top: 120px;
+    padding-top: 30px;
+  }
+
+  .robot-wrap {
+    height: auto;
+    margin: 0;
+    align-self: start;
   }
 
   .robot-image {
-    width: min(100%, 300px);
-    margin: -210px auto -16px;
+    width: auto !important;
+    height: 550px !important;
+    margin: 0 auto -20px;
+    object-fit: contain;
+  }
+
+  .form-grid > .reveal:first-child {
+    order: 2;
+  }
+
+  .form-grid > .reveal:last-child {
+    order: 1;
   }
 
   .lead-form {
     max-width: none;
+  }
+
+  .form-copy {
+    padding-top: 0;
+    margin-bottom: 12px;
   }
 
   .footer-section {
