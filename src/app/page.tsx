@@ -4,9 +4,9 @@ import { CouponCopy } from "../components/coupon-copy";
 import { Reveal } from "../components/reveal";
 
 const heroImages = {
-  child: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=900&q=80",
-  vaccine: "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1200&q=80",
-  baby: "https://images.unsplash.com/photo-1544126592-807ade215a0b?auto=format&fit=crop&w=900&q=80",
+  child: "/assets/images/landing/hero/menino-jovem-moreno-vacina-one-campinas-taquaral.png",
+  vaccine: "/assets/images/landing/hero/jovem-se-vacinando-vacina-one-mansoes-santo-antonio-campinas.png",
+  baby: "/assets/images/landing/hero/bebe-vacina-one.png",
   robot: "/assets/images/landing/robo-transparente.png",
 };
 
