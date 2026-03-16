@@ -404,7 +404,7 @@ p {
 
 .robot-wrap {
   position: absolute;
-  right: -140px;
+  right: -64px;
   top: 0;
   height: 100%;
   z-index: 3;
@@ -412,9 +412,9 @@ p {
 }
 
 .robot-image {
-  width: 681px;
+  width: 610px;
   max-width: none;
-  margin: -90px 0 -200px auto;
+  margin: -235px 0 -110px auto;
   object-fit: contain;
 }
 
@@ -818,8 +818,8 @@ p {
   }
 
   .robot-image {
-    width: min(100%, 430px);
-    margin: -14px auto -48px;
+    width: min(100%, 420px);
+    margin: -120px auto -26px;
   }
 
   .robot-wrap {
@@ -957,8 +957,8 @@ p {
   }
 
   .robot-image {
-    width: min(100%, 360px);
-    margin: -8px auto -10px;
+    width: min(100%, 300px);
+    margin: -210px auto -16px;
   }
 
   .lead-form {
