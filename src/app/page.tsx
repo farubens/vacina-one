@@ -43,15 +43,37 @@ export default function Home() {
           <Reveal className="hero-media">
             <div className="hero-media-stack">
               <div className="hero-photo hero-photo-top">
-                <img src={heroImages.child} alt="Criança sorrindo" />
+                <Image
+                  src={heroImages.child}
+                  alt="Criança sorrindo"
+                  width={1130}
+                  height={1130}
+                  sizes="(max-width: 768px) 44vw, (max-width: 1100px) 45vw, 22vw"
+                  className="hero-photo-image"
+                />
               </div>
               <div className="hero-photo hero-photo-bottom">
-                <img src={heroImages.baby} alt="Bebê sorrindo" />
+                <Image
+                  src={heroImages.baby}
+                  alt="Bebê sorrindo"
+                  width={824}
+                  height={824}
+                  sizes="(max-width: 768px) 38vw, (max-width: 1100px) 40vw, 17vw"
+                  className="hero-photo-image"
+                />
               </div>
             </div>
 
             <div className="hero-photo hero-photo-main">
-              <img src={heroImages.vaccine} alt="Aplicação de vacina" />
+              <Image
+                src={heroImages.vaccine}
+                alt="Aplicação de vacina"
+                width={879}
+                height={1027}
+                sizes="(max-width: 768px) 46vw, (max-width: 1100px) 47vw, 26vw"
+                className="hero-photo-image"
+                priority
+              />
             </div>
 
             <div className="hero-badge">Proteção em primeiro lugar</div>
@@ -87,7 +109,14 @@ export default function Home() {
           </Reveal>
 
           <Reveal className="robot-wrap" delay={0.1}>
-            <img className="robot-image" src={heroImages.robot} alt="Mascote VacinaOne" />
+            <Image
+              className="robot-image"
+              src={heroImages.robot}
+              alt="Mascote VacinaOne"
+              width={900}
+              height={1364}
+              sizes="(max-width: 1100px) 70vw, 36vw"
+            />
           </Reveal>
         </div>
       </section>
