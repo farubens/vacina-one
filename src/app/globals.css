@@ -488,7 +488,7 @@ p {
 }
 
 .footer-logo {
-  width: 285px;
+  width: 171px;
   height: auto;
 }
 
@@ -498,7 +498,7 @@ p {
   list-style: none;
   display: grid;
   gap: 14px;
-  font-size: 21px;
+  font-size: 13px;
   line-height: 1.28;
   letter-spacing: -0.02em;
 }
@@ -527,7 +527,7 @@ p {
 }
 
 .footer-social p {
-  font-size: 22px;
+  font-size: 13px;
   font-weight: 700;
 }
 
@@ -553,7 +553,7 @@ p {
 
 .footer-right h2 {
   max-width: 600px;
-  font-size: clamp(24px, 2.05vw, 36px);
+  font-size: clamp(14px, 1.23vw, 22px);
   line-height: 1.04;
   letter-spacing: -0.04em;
   color: #ffffff;
@@ -562,7 +562,7 @@ p {
 .footer-right p {
   margin-top: 30px;
   max-width: 620px;
-  font-size: 23px;
+  font-size: 14px;
   line-height: 1.45;
   color: rgba(255, 255, 255, 0.96);
 }
@@ -575,11 +575,153 @@ p {
   border-radius: 999px;
   align-items: center;
   justify-content: center;
-  background: #f2b23a;
-  color: #ffffff;
-  font-size: 18px;
+  background: transparent;
+  border: 1.5px solid #f2b23a;
+  color: #f2b23a;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: -0.02em;
+}
+
+.footer-cta:hover,
+.footer-cta:focus-visible {
+  background: #f2b23a;
+  color: #ffffff;
+}
+
+.copyright-bar {
+  background: #3a4a5c;
+  color: #ffffff;
+  padding: 10px 0;
+}
+
+.copyright-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  font-size: 12px;
+  line-height: 1.25;
+}
+
+.copyright-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.copyright-links a:hover,
+.copyright-links a:focus-visible {
+  text-decoration: underline;
+}
+
+.meme-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.meme-link img {
+  width: 88px;
+  height: auto;
+}
+
+.cookie-banner {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 120;
+  border-radius: 14px;
+  border: 1px solid rgba(35, 74, 103, 0.16);
+  background: #ffffff;
+  box-shadow: 0 18px 38px rgba(19, 47, 68, 0.2);
+  padding: 14px 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.cookie-banner p {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #274865;
+}
+
+.cookie-banner p a {
+  color: #234a67;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.cookie-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.cookie-btn {
+  min-height: 38px;
+  border-radius: 999px;
+  padding: 0 14px;
+  border: 1px solid #69b9c0;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.cookie-btn-secondary {
+  background: #ffffff;
+  color: #3f6f8f;
+}
+
+.cookie-btn-primary {
+  background: #69b9c0;
+  color: #ffffff;
+}
+
+.legal-page {
+  min-height: 100vh;
+  background: #f6fbfc;
+  padding: 44px 24px 60px;
+}
+
+.legal-shell {
+  width: min(100%, 980px);
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid rgba(35, 74, 103, 0.09);
+  border-radius: 16px;
+  padding: 28px 24px;
+  box-shadow: 0 18px 36px rgba(22, 51, 69, 0.08);
+}
+
+.legal-shell h1 {
+  color: #234a67;
+  font-size: 34px;
+  line-height: 1.08;
+  margin: 0 0 20px;
+}
+
+.legal-shell h2 {
+  color: #234a67;
+  font-size: 19px;
+  margin: 18px 0 8px;
+}
+
+.legal-shell p {
+  color: #355a78;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.legal-shell a {
+  color: #234a67;
+  font-weight: 700;
+}
+
+.legal-back {
+  margin-top: 20px;
 }
 
 @media (max-width: 1100px) {
@@ -667,24 +809,24 @@ p {
   }
 
   .footer-contact-list {
-    font-size: 16px;
+    font-size: 13px;
   }
 
   .footer-social p {
-    font-size: 20px;
+    font-size: 13px;
   }
 
   .footer-right h2 {
-    font-size: 30px;
+    font-size: 20px;
   }
 
   .footer-right p {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .footer-cta {
-    font-size: 18px;
-    min-height: 42px;
+    font-size: 11px;
+    min-height: 36px;
   }
 }
 
@@ -784,7 +926,7 @@ p {
   }
 
   .footer-social p {
-    font-size: 18px;
+    font-size: 13px;
   }
 
   .social-links a {
@@ -794,20 +936,34 @@ p {
   }
 
   .footer-right h2 {
-    font-size: 34px;
+    font-size: 18px;
   }
 
   .footer-right p {
     margin-top: 18px;
-    font-size: 17px;
+    font-size: 14px;
   }
 
-.footer-cta {
-  margin-top: 22px;
-  font-size: 16px;
-  min-height: 38px;
-  padding: 0 18px;
-}
+  .footer-cta {
+    margin-top: 22px;
+    font-size: 11px;
+    min-height: 36px;
+    padding: 0 18px;
+  }
+
+  .copyright-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 11px;
+  }
+
+  .cookie-actions {
+    justify-content: stretch;
+  }
+
+  .cookie-btn {
+    flex: 1;
+  }
 }
 
 .thanks-page {

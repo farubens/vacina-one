@@ -1,5 +1,7 @@
 ﻿import Image from "next/image";
+import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa6";
+import { CookieConsentBanner } from "../components/cookie-consent-banner";
 import { CouponCopy } from "../components/coupon-copy";
 import { Reveal } from "../components/reveal";
 
@@ -179,6 +181,34 @@ export default function Home() {
           </Reveal>
         </div>
       </footer>
+
+      <div className="copyright-bar">
+        <div className="container copyright-inner">
+          <p>© 2026 - VacinaOne | Todos os direitos reservados.</p>
+          <div className="copyright-links">
+            <Link href="/politica-de-privacidade">Política de Privacidade</Link>
+            <span>|</span>
+            <Link href="/uso-de-cookies">Uso de Cookies</Link>
+          </div>
+          <a
+            href="https://memedigital.com.br"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="MEME Digital - abre em nova guia"
+            className="meme-link"
+          >
+            <span>Dev. & Design By</span>
+            <Image
+              src="/assets/images/landing/hero/logo-direitos-autorais-meme-digital.png"
+              alt="MEME Digital"
+              width={88}
+              height={28}
+            />
+          </a>
+        </div>
+      </div>
+
+      <CookieConsentBanner />
     </main>
   );
 }
