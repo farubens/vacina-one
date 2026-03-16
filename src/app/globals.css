@@ -315,7 +315,7 @@ p {
 
 .coupon-box {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -331,6 +331,10 @@ p {
   isolation: isolate;
 }
 
+.coupon-box::before {
+  display: none;
+}
+
 .coupon-box:hover,
 .coupon-box:focus-visible {
   transform: translateY(-2px);
@@ -341,6 +345,7 @@ p {
   position: absolute;
   left: 50%;
   top: -38px;
+  z-index: 20;
   transform: translateX(-50%) translateY(6px);
   background: rgba(255, 255, 255, 0.96);
   color: #234a67;
