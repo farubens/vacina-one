@@ -5,7 +5,7 @@ import { Reveal } from "../components/reveal";
 
 const heroImages = {
   child: "/assets/images/landing/hero/menino-jovem-moreno-vacina-one-campinas-taquaral.png",
-  vaccine: "/assets/images/landing/hero/jovem-se-vacinando-vacina-one-mansoes-santo-antonio-campinas.png",
+  vaccine: "/assets/images/landing/hero/jovem-se-vacinando-vacina-one-mansoes-santo-antonio.png",
   baby: "/assets/images/landing/hero/bebe-vacina-one.png",
   robot: "/assets/images/landing/robo-transparente.png",
 };
