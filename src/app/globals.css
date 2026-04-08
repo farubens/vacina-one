@@ -1256,7 +1256,7 @@ p {
   margin-top: 16px;
   max-width: none;
   color: var(--brand-blue);
-  font-size: clamp(15px, 1.25vw, 22px);
+  font-size: 14px;
   line-height: 1.5;
   text-align: justify;
 }
