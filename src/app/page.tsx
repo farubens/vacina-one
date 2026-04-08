@@ -1,8 +1,9 @@
 ﻿import Image from "next/image";
 import Link from "next/link";
-import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa6";
+import { FaFacebookF, FaInstagram } from "react-icons/fa6";
 import { CookieConsentBanner } from "../components/cookie-consent-banner";
 import { CouponCopy } from "../components/coupon-copy";
+import { LeadForm } from "../components/lead-form";
 import { Reveal } from "../components/reveal";
 
 const heroImages = {
@@ -31,7 +32,7 @@ export default function Home() {
           </Reveal>
 
           <Reveal delay={0.08}>
-            <a className="franchise-cta interactive-btn" href="#rodape">
+            <a className="franchise-cta interactive-btn" href="#cadastro">
               QUERO SER UM DOS PRIMEIROS
             </a>
           </Reveal>
@@ -124,16 +125,7 @@ export default function Home() {
       <section id="cadastro" className="form-section">
         <div className="container form-grid">
           <Reveal>
-            <form className="lead-form" action="/obrigado" method="get">
-              <input type="text" name="name" placeholder="Nome Completo" aria-label="Nome completo" required />
-              <input type="tel" name="phone" placeholder="WhatsApp" aria-label="WhatsApp" required />
-              <input type="email" name="email" placeholder="Email" aria-label="Email" required />
-              <input type="text" name="coupon" placeholder="Cupom" defaultValue="VACINAONE10" aria-label="Cupom" />
-              <input type="text" name="vaccine" placeholder="Qual vacina?" aria-label="Qual vacina" />
-              <button className="interactive-btn" type="submit">
-                QUERO MEU BENEFÍCIO DE INAUGURAÇÃO
-              </button>
-            </form>
+            <LeadForm />
           </Reveal>
 
           <Reveal className="form-copy" delay={0.1}>
@@ -158,10 +150,6 @@ export default function Home() {
 
             <ul className="footer-contact-list">
               <li>
-                <FaWhatsapp aria-hidden="true" />
-                <span>(19) 9917-2822</span>
-              </li>
-              <li>
                 <Image
                   src="/assets/images/landing/sections/email.svg"
                   alt=""
@@ -181,17 +169,17 @@ export default function Home() {
                   height={18}
                   className="footer-contact-icon"
                 />
-                <span>R. Percílio Neto, 407 - Parque Taquaral - Campinas - SP</span>
+                <span>R. Percílio Neto, 407 | Sala B - Parque Taquaral - Campinas - SP</span>
               </li>
             </ul>
 
             <div className="footer-social">
               <p>Nossas redes</p>
               <div className="social-links">
-                <a href="#" aria-label="Facebook">
+                <a href="#cadastro" aria-label="Facebook">
                   <FaFacebookF aria-hidden="true" />
                 </a>
-                <a href="#" aria-label="Instagram">
+                <a href="#cadastro" aria-label="Instagram">
                   <FaInstagram aria-hidden="true" />
                 </a>
               </div>
@@ -230,10 +218,16 @@ export default function Home() {
             <Image
               src="/assets/images/landing/hero/logo-direitos-autorais-meme-digital.png"
               alt="MEME Digital"
-              width={88}
-              height={28}
+              width={53}
+              height={17}
             />
           </a>
+        </div>
+        <div className="container benefit-note">
+          <p>
+            Condições dos benefícios: Válido 1 benefício por agendamento. Não cumulativo. Pessoal e intransferível.
+            Sujeito à disponibilidade e tempo limitado. Não convertível em dinheiro. Reembolso considera valor pago.
+          </p>
         </div>
       </div>
 

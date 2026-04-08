@@ -16,9 +16,28 @@ const lexend = Lexend({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.vacinaone.com.br"),
   title: "VacinaOne | Nova clínica de vacinação em Campinas",
   description:
-    "Landing page da VacinaOne para pré-cadastro de famílias interessadas na nova unidade em Campinas.",
+    "A VacinaOne está chegando ao Taquaral, próximo ao Mansões Santo Antônio, em Campinas.",
+  icons: {
+    icon: "/assets/images/brand/fav.jpg",
+    shortcut: "/assets/images/brand/fav.jpg",
+    apple: "/assets/images/brand/fav.jpg",
+  },
+  openGraph: {
+    title: "VacinaOne | Nova clínica de vacinação em Campinas",
+    description: "A VacinaOne está chegando ao Taquaral, próximo ao Mansões Santo Antônio, em Campinas.",
+    url: "https://www.vacinaone.com.br/",
+    siteName: "VacinaOne",
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "VacinaOne | Nova clínica de vacinação em Campinas",
+    description: "A VacinaOne está chegando ao Taquaral, próximo ao Mansões Santo Antônio, em Campinas.",
+  },
 };
 
 export default function RootLayout({
