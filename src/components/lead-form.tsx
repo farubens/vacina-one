@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { type FormEvent, useEffect, useMemo, useRef, useState } from "react";
 
 const vaccineOptions = [
   "Tríplice Viral",
@@ -15,8 +15,8 @@ const vaccineOptions = [
   "Pneumo 23",
   "Dtpa tríplice bacteriana",
   "Dengue (Qdenga)",
-  "VSR bebê – nirsevimabe (Beyfortus)",
-  "VSR gestante – Abrysvo",
+  "VSR bebê - nirsevimabe (Beyfortus)",
+  "VSR gestante - Abrysvo",
   "Hepatite A (adulto e infantil)",
   "Hepatite A + B",
   "Febre Tifoide",
@@ -29,7 +29,9 @@ const OTHER_OPTION = "Outras";
 export function LeadForm() {
   const [selectedVaccines, setSelectedVaccines] = useState<string[]>([]);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const selectRef = useRef<HTMLDivElement | null>(null);
+  const hasSubmittedRef = useRef(false);
   const hasOtherSelected = useMemo(() => selectedVaccines.includes(OTHER_OPTION), [selectedVaccines]);
   const selectedVaccinesLabel = useMemo(() => {
     if (selectedVaccines.length === 0) {
@@ -60,8 +62,19 @@ export function LeadForm() {
     );
   }
 
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    if (hasSubmittedRef.current) {
+      event.preventDefault();
+      return;
+    }
+
+    hasSubmittedRef.current = true;
+    setIsSubmitting(true);
+    setIsMenuOpen(false);
+  }
+
   return (
-    <form className="lead-form" action="/api/lead" method="post">
+    <form className="lead-form" action="/api/lead" method="post" onSubmit={handleSubmit}>
       <input type="text" name="name" placeholder="Nome Completo" aria-label="Nome completo" required />
       <input type="tel" name="phone" placeholder="WhatsApp" aria-label="WhatsApp" required />
       <input type="email" name="email" placeholder="Email" aria-label="Email" required />
@@ -113,8 +126,8 @@ export function LeadForm() {
       ) : null}
 
       <input type="text" name="website" tabIndex={-1} autoComplete="off" className="lead-honeypot" />
-      <button className="interactive-btn" type="submit">
-        QUERO MEU BENEFÍCIO DE INAUGURAÇÃO
+      <button className="interactive-btn" type="submit" disabled={isSubmitting} aria-busy={isSubmitting}>
+        {isSubmitting ? "ENVIANDO..." : "QUERO MEU BENEFÍCIO DE INAUGURAÇÃO"}
       </button>
     </form>
   );

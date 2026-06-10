@@ -567,6 +567,12 @@ p {
   cursor: pointer;
 }
 
+.lead-form button:not(.vaccine-select-trigger):disabled {
+  cursor: wait;
+  opacity: 0.72;
+  transform: none;
+}
+
 .lead-honeypot {
   position: absolute;
   left: -9999px;
