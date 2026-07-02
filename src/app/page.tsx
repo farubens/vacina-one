@@ -1,6 +1,6 @@
 ﻿import Image from "next/image";
 import Link from "next/link";
-import { FaFacebookF, FaInstagram } from "react-icons/fa6";
+import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa6";
 import { CookieConsentBanner } from "../components/cookie-consent-banner";
 import { CouponCopy } from "../components/coupon-copy";
 import { LeadForm } from "../components/lead-form";
@@ -12,6 +12,9 @@ const heroImages = {
   baby: "/assets/images/landing/hero/bebe-vacina-one.png",
   robot: "/assets/images/landing/robo-transparente.png",
 };
+
+const whatsappDisplay = "19 97101-0707";
+const whatsappUrl = "https://wa.me/5519971010707";
 
 export default function Home() {
   return (
@@ -161,6 +164,12 @@ export default function Home() {
                 <span>atendimento@vacinaone.com.br</span>
               </li>
               <li>
+                <FaWhatsapp aria-hidden="true" />
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                  {whatsappDisplay}
+                </a>
+              </li>
+              <li>
                 <Image
                   src="/assets/images/landing/sections/endereco.svg"
                   alt=""
@@ -182,6 +191,9 @@ export default function Home() {
                 <a href="#cadastro" aria-label="Instagram">
                   <FaInstagram aria-hidden="true" />
                 </a>
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                  <FaWhatsapp aria-hidden="true" />
+                </a>
               </div>
             </div>
           </Reveal>
@@ -192,8 +204,8 @@ export default function Home() {
               Quer agendar, tirar uma dúvida ou entender como a VacinaOne pode ajudar sua família, equipe ou
               instituição? Envie uma mensagem e retornamos em breve.
             </p>
-            <a href="#cadastro" className="footer-cta interactive-btn">
-              QUERO SER UM DOS PRIMEIROS
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="footer-cta interactive-btn">
+              FALAR NO WHATSAPP
             </a>
           </Reveal>
         </div>
