@@ -253,6 +253,16 @@ export default function Home() {
         </div>
       </div>
 
+      <a
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="floating-whatsapp"
+        aria-label="Falar no WhatsApp sobre agendamento de vacina"
+      >
+        <Image src={whatsappLogo} alt="" aria-hidden="true" width={34} height={34} />
+      </a>
+
       <CookieConsentBanner />
     </main>
   );
