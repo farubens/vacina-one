@@ -1,6 +1,6 @@
 ﻿import Image from "next/image";
 import Link from "next/link";
-import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa6";
+import { FaFacebookF, FaInstagram } from "react-icons/fa6";
 import { CookieConsentBanner } from "../components/cookie-consent-banner";
 import { CouponCopy } from "../components/coupon-copy";
 import { LeadForm } from "../components/lead-form";
@@ -14,7 +14,9 @@ const heroImages = {
 };
 
 const whatsappDisplay = "19 97101-0707";
-const whatsappUrl = "https://wa.me/5519971010707";
+const whatsappLogo = "/assets/images/social/whatsapp.svg";
+const whatsappMessage = "Gostaria de saber mais sobre como agendar a vacina";
+const whatsappUrl = `https://wa.me/5519971010707?text=${encodeURIComponent(whatsappMessage)}`;
 
 export default function Home() {
   return (
@@ -164,7 +166,14 @@ export default function Home() {
                 <span>atendimento@vacinaone.com.br</span>
               </li>
               <li>
-                <FaWhatsapp aria-hidden="true" />
+                <Image
+                  src={whatsappLogo}
+                  alt=""
+                  aria-hidden="true"
+                  width={18}
+                  height={18}
+                  className="footer-contact-icon"
+                />
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                   {whatsappDisplay}
                 </a>
@@ -192,7 +201,7 @@ export default function Home() {
                   <FaInstagram aria-hidden="true" />
                 </a>
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                  <FaWhatsapp aria-hidden="true" />
+                  <Image src={whatsappLogo} alt="" aria-hidden="true" width={22} height={22} />
                 </a>
               </div>
             </div>
@@ -205,6 +214,7 @@ export default function Home() {
               instituição? Envie uma mensagem e retornamos em breve.
             </p>
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="footer-cta interactive-btn">
+              <Image src={whatsappLogo} alt="" aria-hidden="true" width={18} height={18} />
               FALAR NO WHATSAPP
             </a>
           </Reveal>
