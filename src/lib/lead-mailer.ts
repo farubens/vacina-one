@@ -12,6 +12,7 @@ export type LeadPayload = {
 
 const logoPath = path.join(process.cwd(), "public", "assets", "images", "brand", "logo-vacina-one.png");
 const mascotPath = path.join(process.cwd(), "public", "assets", "images", "landing", "robo-transparente.png");
+const siteUrl = "https://lp.vacinaone.com.br";
 
 function getRequiredEnv(name: string) {
   const value = process.env[name];
@@ -190,7 +191,7 @@ function createAutoReplyHtml(lead: LeadPayload) {
         <tr>
           <td style="padding: 8px 32px 32px;">
             <a
-              href="https://www.vacinaone.com.br/"
+              href="${siteUrl}/"
               style="display: inline-block; padding: 14px 24px; border-radius: 999px; background: #1c3551; color: #ffffff; font-size: 14px; font-weight: 800; text-decoration: none;"
             >
               Acessar o site da VacinaOne
@@ -220,7 +221,7 @@ function createAutoReplyText(lead: LeadPayload) {
     `Vacina de interesse: ${lead.vaccine || "-"}`,
     `Cupom: ${lead.coupon || "-"}`,
     "",
-    "Site: https://www.vacinaone.com.br/",
+    `Site: ${siteUrl}/`,
   ].join("\n");
 }
 

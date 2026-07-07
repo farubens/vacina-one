@@ -23,8 +23,10 @@ const socialImage = {
   alt: "VacinaOne | Nova clínica de vacinação em Campinas",
 };
 
+const siteUrl = "https://lp.vacinaone.com.br";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.vacinaone.com.br"),
+  metadataBase: new URL(siteUrl),
   title: "VacinaOne | Nova clínica de vacinação em Campinas",
   description:
     "A VacinaOne está chegando ao Taquaral, próximo ao Mansões Santo Antônio, em Campinas.",
@@ -36,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "VacinaOne | Nova clínica de vacinação em Campinas",
     description: "A VacinaOne está chegando ao Taquaral, próximo ao Mansões Santo Antônio, em Campinas.",
-    url: "https://www.vacinaone.com.br/",
+    url: `${siteUrl}/`,
     siteName: "VacinaOne",
     images: [socialImage],
     locale: "pt_BR",
