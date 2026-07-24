@@ -33,6 +33,11 @@ function getSheetsClient() {
   return google.sheets({ version: "v4", auth });
 }
 
+function toSheetRange(sheetName: string, range: string) {
+  const escapedSheetName = sheetName.replaceAll("'", "''");
+  return `'${escapedSheetName}'!${range}`;
+}
+
 export async function appendLeadToSheet(lead: LeadPayload) {
   const sheets = getSheetsClient();
   const spreadsheetId = getRequiredEnv("GOOGLE_SPREADSHEET_ID");
@@ -40,7 +45,7 @@ export async function appendLeadToSheet(lead: LeadPayload) {
 
   await sheets.spreadsheets.values.append({
     spreadsheetId,
-    range: `${sheetName}!A:F`,
+    range: toSheetRange(sheetName, "A:F"),
     valueInputOption: "USER_ENTERED",
     insertDataOption: "INSERT_ROWS",
     requestBody: {
